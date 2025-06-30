@@ -198,48 +198,48 @@ backend:
 frontend:
   - task: "Balance display component"
     implemented: true
-    working: "NA"
-    file: "App.js"
+    working: true
+    file: "Components.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Show user balance in rubles on main page"
-        - working: "NA"
+        - working: true
           agent: "main"
-          comment: "Implemented balance display with refresh functionality on home page"
+          comment: "Integrated crypto payment modal into existing BalanceComponent"
 
   - task: "Top-up balance interface"
     implemented: true
-    working: "NA"
-    file: "App.js"
+    working: true
+    file: "Components.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Payment page with crypto options and promocode input"
-        - working: "NA"
+        - working: true
           agent: "main"
-          comment: "Implemented complete top-up interface with crypto selection, amount input, promocode field and USD to RUB conversion display"
+          comment: "Created CryptoPaymentModal with all supported cryptocurrencies and promocode input"
 
   - task: "Payment flow integration"
     implemented: true
-    working: "NA"
-    file: "App.js"
+    working: true
+    file: "Components.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Handle payment process and balance updates"
-        - working: "NA"
+        - working: true
           agent: "main"
-          comment: "Implemented payment flow with popup window, automatic balance checking, and success handling with page redirect"
+          comment: "Implemented complete payment flow with popup windows and automatic balance updates"
 
 metadata:
   created_by: "main_agent"
