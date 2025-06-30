@@ -107,11 +107,11 @@ user_problem_statement: "Интеграция платежной системы 
 backend:
   - task: "User model with ruble balance"
     implemented: true
-    working: "NA"
+    working: true
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -119,14 +119,17 @@ backend:
         - working: "NA"
           agent: "main"
           comment: "Implemented User model with balance_rub field, UserCreate and related endpoints"
+        - working: true
+          agent: "testing"
+          comment: "User model with ruble balance is working correctly. Successfully created user, retrieved by ID and username, and verified balance_rub field exists and is initialized to 0.0."
 
   - task: "Payment transaction model"
     implemented: true
-    working: "NA"
+    working: true
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -134,14 +137,17 @@ backend:
         - working: "NA"
           agent: "main"
           comment: "Implemented PaymentTransaction model with all necessary fields including crypto amounts and exchange rates"
+        - working: true
+          agent: "testing"
+          comment: "Payment transaction model is working correctly. Successfully created transactions for both crypto payments and promocode applications. Fixed an issue with transaction history endpoint that was returning non-serializable MongoDB ObjectId objects."
 
   - task: "Crypto Bot API integration"
     implemented: true
-    working: "NA"
+    working: true
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -149,14 +155,17 @@ backend:
         - working: "NA"
           agent: "main"
           comment: "Implemented full Crypto Bot API integration with createInvoice, getMe test endpoint, and webhook handler"
+        - working: true
+          agent: "testing"
+          comment: "Crypto Bot API integration is working correctly. Successfully connected to API via test endpoint and created payment invoices for multiple cryptocurrencies (USDT, BTC, TON)."
 
   - task: "USD to RUB exchange rate system"
     implemented: true
-    working: "NA"
+    working: true
     file: "server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -164,14 +173,17 @@ backend:
         - working: "NA"
           agent: "main"
           comment: "Implemented exchange rate system using exchangerate-api.com with fallback rate and database storage"
+        - working: true
+          agent: "testing"
+          comment: "Exchange rate system is working correctly. Successfully retrieved current USD to RUB rate (78.53) and verified it's used for payment amount conversions."
 
   - task: "Promocode YANMAIZI system"
     implemented: true
-    working: "NA"
+    working: true
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -179,6 +191,9 @@ backend:
         - working: "NA"
           agent: "main"
           comment: "Implemented promocode endpoint that validates YANMAIZI code and instantly adds rubles to balance"
+        - working: true
+          agent: "testing"
+          comment: "Promocode system is working correctly. Successfully applied YANMAIZI code to add 1000 RUB to user balance and verified balance was updated. Also confirmed invalid promocodes are rejected."
 
 frontend:
   - task: "Balance display component"
