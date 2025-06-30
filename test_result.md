@@ -101,3 +101,122 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Интеграция платежной системы Crypto Bot с Telegram API. Реализовать систему баланса пользователей в рублях с конвертацией из долларов. Поддерживаемые криптовалюты: USDT, TON, TRX, BTC, ETH, LTC, NOT, BNB. Промокод YANMAIZI должен мгновенно пополнять баланс. После нажатия 'пополнить баланс' должен открыться сайт оплаты, после оплаты обновлять баланс основного сайта и закрывать сайт с пополнением."
+
+backend:
+  - task: "User model with ruble balance"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to create User model with balance field in rubles"
+
+  - task: "Payment transaction model"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Create model to track crypto payments and transactions"
+
+  - task: "Crypto Bot API integration"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Integrate with Crypto Bot API using token 422727:AAM4SVLczjaQcxPRFGrbTLtRnDwB7kHbNRK"
+
+  - task: "USD to RUB exchange rate system"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Add exchange rate API to convert USD to RUB for balance"
+
+  - task: "Promocode YANMAIZI system"
+    implemented: false
+    working: "NA"
+    file: "server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Secret promocode that instantly adds rubles to balance"
+
+frontend:
+  - task: "Balance display component"
+    implemented: false
+    working: "NA"
+    file: "App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Show user balance in rubles on main page"
+
+  - task: "Top-up balance interface"
+    implemented: false
+    working: "NA"
+    file: "App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Payment page with crypto options and promocode input"
+
+  - task: "Payment flow integration"
+    implemented: false
+    working: "NA"
+    file: "App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Handle payment process and balance updates"
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 0
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "User model with ruble balance"
+    - "Crypto Bot API integration"
+    - "Promocode YANMAIZI system"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "main"
+      message: "Starting implementation of Crypto Bot payment system. User provided API token and requirements for ruble balance with USD conversion. Supported cryptos: USDT, TON, TRX, BTC, ETH, LTC, NOT, BNB."
