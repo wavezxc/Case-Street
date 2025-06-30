@@ -106,101 +106,125 @@ user_problem_statement: "Интеграция платежной системы 
 
 backend:
   - task: "User model with ruble balance"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Need to create User model with balance field in rubles"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented User model with balance_rub field, UserCreate and related endpoints"
 
   - task: "Payment transaction model"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Create model to track crypto payments and transactions"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented PaymentTransaction model with all necessary fields including crypto amounts and exchange rates"
 
   - task: "Crypto Bot API integration"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Integrate with Crypto Bot API using token 422727:AAM4SVLczjaQcxPRFGrbTLtRnDwB7kHbNRK"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented full Crypto Bot API integration with createInvoice, getMe test endpoint, and webhook handler"
 
   - task: "USD to RUB exchange rate system"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Add exchange rate API to convert USD to RUB for balance"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented exchange rate system using exchangerate-api.com with fallback rate and database storage"
 
   - task: "Promocode YANMAIZI system"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Secret promocode that instantly adds rubles to balance"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented promocode endpoint that validates YANMAIZI code and instantly adds rubles to balance"
 
 frontend:
   - task: "Balance display component"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Show user balance in rubles on main page"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented balance display with refresh functionality on home page"
 
   - task: "Top-up balance interface"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Payment page with crypto options and promocode input"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented complete top-up interface with crypto selection, amount input, promocode field and USD to RUB conversion display"
 
   - task: "Payment flow integration"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Handle payment process and balance updates"
+        - working: "NA"
+          agent: "main"
+          comment: "Implemented payment flow with popup window, automatic balance checking, and success handling with page redirect"
 
 metadata:
   created_by: "main_agent"
