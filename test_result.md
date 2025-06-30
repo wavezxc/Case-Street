@@ -244,3 +244,5 @@ test_plan:
 agent_communication:
     - agent: "main"
       message: "Starting implementation of Crypto Bot payment system. User provided API token and requirements for ruble balance with USD conversion. Supported cryptos: USDT, TON, TRX, BTC, ETH, LTC, NOT, BNB."
+    - agent: "main"
+      message: "Completed full implementation of backend and frontend. Backend includes User model, PaymentTransaction model, Crypto Bot API integration, USD/RUB exchange rate system, and YANMAIZI promocode system. Frontend includes balance display, top-up interface, and complete payment flow. Ready for backend testing."
