@@ -243,5 +243,7 @@ agent_communication:
       message: "Starting implementation of Crypto Bot payment system. User provided API token and requirements for ruble balance with USD conversion. Supported cryptos: USDT, TON, TRX, BTC, ETH, LTC, NOT, BNB."
     - agent: "main"
       message: "Completed full implementation of backend and frontend. Backend includes User model, PaymentTransaction model, Crypto Bot API integration, USD/RUB exchange rate system, and YANMAIZI promocode system. Frontend includes balance display, top-up interface, and complete payment flow. Ready for backend testing."
+    - agent: "main"
+      message: "Successfully integrated crypto payment system into existing Case-Street project. All components working: Crypto Bot API connection verified, exchange rate system operational (78.53 RUB/USD), promocode YANMAIZI functional, and frontend modal integrated into existing balance component. System ready for production use."
     - agent: "testing"
       message: "Completed backend testing. All backend API endpoints are working correctly. Fixed an issue with the transaction history endpoint that was returning non-serializable MongoDB ObjectId objects. All tests are now passing. The backend is fully functional with user management, exchange rates, Crypto Bot integration, payment creation, promocode system, and transaction history."
