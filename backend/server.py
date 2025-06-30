@@ -348,7 +348,24 @@ async def crypto_bot_webhook(request: Request):
 @api_router.get("/transactions/{user_id}")
 async def get_user_transactions(user_id: str):
     transactions = await db.transactions.find({"user_id": user_id}).to_list(100)
-    return transactions
+    # Convert MongoDB documents to PaymentTransaction objects to ensure proper serialization
+    return [
+        {
+            "id": str(t.get("_id")),
+            "user_id": t.get("user_id"),
+            "invoice_id": t.get("invoice_id"),
+            "amount_usd": t.get("amount_usd"),
+            "amount_rub": t.get("amount_rub"),
+            "crypto_currency": t.get("crypto_currency"),
+            "crypto_amount": t.get("crypto_amount"),
+            "status": t.get("status"),
+            "exchange_rate": t.get("exchange_rate"),
+            "created_at": t.get("created_at"),
+            "paid_at": t.get("paid_at"),
+            "is_promocode": t.get("is_promocode", False)
+        } 
+        for t in transactions
+    ]
 
 @api_router.get("/test-crypto-bot")
 async def test_crypto_bot():
