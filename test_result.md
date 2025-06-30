@@ -248,10 +248,7 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "User model with ruble balance"
-    - "Crypto Bot API integration"
-    - "Promocode YANMAIZI system"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -261,3 +258,5 @@ agent_communication:
       message: "Starting implementation of Crypto Bot payment system. User provided API token and requirements for ruble balance with USD conversion. Supported cryptos: USDT, TON, TRX, BTC, ETH, LTC, NOT, BNB."
     - agent: "main"
       message: "Completed full implementation of backend and frontend. Backend includes User model, PaymentTransaction model, Crypto Bot API integration, USD/RUB exchange rate system, and YANMAIZI promocode system. Frontend includes balance display, top-up interface, and complete payment flow. Ready for backend testing."
+    - agent: "testing"
+      message: "Completed backend testing. All backend API endpoints are working correctly. Fixed an issue with the transaction history endpoint that was returning non-serializable MongoDB ObjectId objects. All tests are now passing. The backend is fully functional with user management, exchange rates, Crypto Bot integration, payment creation, promocode system, and transaction history."
